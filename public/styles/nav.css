@@ -8,11 +8,13 @@
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 1;
 }
 
 #nav-bar .logo {
   float: left;
   height: 60px;
+  opacity: 0.6;
 }
 
 #nav-bar .header {

@@ -1,5 +1,5 @@
 #nav-bar {
-  background: #FFB149;
+  background: #1DA1F2;
   color: #e8fdff;
   height: 60px;
   left: 0;
@@ -13,7 +13,6 @@
 #nav-bar .logo {
   float: left;
   height: 60px;
-
 }
 
 #nav-bar .header {

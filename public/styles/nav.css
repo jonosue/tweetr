@@ -1,0 +1,11 @@
+#nav-bar {
+  background: #FFB149;
+  color: #e8fdff;
+  height: 60px;
+  left: 0;
+  line-height: 60px;
+  padding: 0em 2em;
+  position: fixed;
+  right: 0;
+  top: 0;
+}

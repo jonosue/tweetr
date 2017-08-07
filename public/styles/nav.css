@@ -9,3 +9,15 @@
   right: 0;
   top: 0;
 }
+
+#nav-bar .logo {
+  float: left;
+  height: 60px;
+
+}
+
+#nav-bar .header {
+  float: left;
+  font-size: 2em;
+  padding-left: 10px;
+}

@@ -29,8 +29,12 @@
   padding: 5px 10px;
 }
 
-.new-tweet span {
+.new-tweet .counter {
   color: #e8fdff;
   float: right;
   font-size: 0.9em;
+}
+
+.new-tweet .make-text-red {
+  color: #FF0000;
 }

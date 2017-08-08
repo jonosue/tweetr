@@ -5,12 +5,10 @@
   padding: 5px 15px 40px 15px;
 }
 
-.new-tweet textarea {
-  display: inline-block;
-  margin-bottom: 10px;
-  max-width: 100%;
-  padding: 10px;
-  width: 100%;
+.new-tweet .counter {
+  color: #e8fdff;
+  float: right;
+  font-size: 0.9em;
 }
 
 .new-tweet h2 {
@@ -29,12 +27,14 @@
   padding: 5px 10px;
 }
 
-.new-tweet .counter {
-  color: #e8fdff;
-  float: right;
-  font-size: 0.9em;
-}
-
 .new-tweet .make-text-red {
   color: #FF0000;
+}
+
+.new-tweet textarea {
+  display: inline-block;
+  margin-bottom: 10px;
+  max-width: 100%;
+  padding: 10px;
+  width: 100%;
 }

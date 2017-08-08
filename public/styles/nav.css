@@ -11,14 +11,14 @@
   z-index: 1;
 }
 
-#nav-bar .logo {
-  float: left;
-  height: 60px;
-  opacity: 0.6;
-}
-
 #nav-bar .header {
   float: left;
   font-size: 2em;
   padding-left: 10px;
+}
+
+#nav-bar .logo {
+  float: left;
+  height: 60px;
+  opacity: 0.6;
 }

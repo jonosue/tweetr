@@ -19,6 +19,9 @@
     <!-- New Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Tweet List CSS -->
+    <link rel="stylesheet" href="/styles/tweet-list.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -39,6 +42,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
@@ -48,17 +52,9 @@
         </form>
       </section>
 
-      <section class="tweet-list">
-        <article class="tweet">
-          <header>
-            <img src="https://pbs.twimg.com/profile_images/760603582773145600/UE36YUDk_400x400.jpg">
-            <span class="author-name">Young Thug</span>
-            <span class="author-account">@youngthug</span>
-          </header>
-          <span>Body stuff</span>
-          <footer>Footer</footer>
-        </article>
+      <section id="tweet-container">
       </section>
+
     </main>
 
   </body>

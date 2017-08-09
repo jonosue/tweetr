@@ -4,8 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-
 $(document).ready(function() {
 
   const data = [
@@ -69,17 +67,13 @@ $(document).ready(function() {
     return $tweet;
   }
 
-function renderTweets(tweets) {
-  tweets.forEach(function(tweet) {
-    let $tweetVal = createTweetElement(tweet);
-    $('#tweet-container').append($tweetVal);
-  });
-}
+  function renderTweets(tweets) {
+    tweets.forEach(function(tweet) {
+      let $tweetVal = createTweetElement(tweet);
+      $('#tweet-container').append($tweetVal);
+    });
+  }
 
-renderTweets(data);
+  renderTweets(data);
 
 });
-
-
-// Test / driver code (temporary)
-// $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.

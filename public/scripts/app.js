@@ -6,52 +6,45 @@
 
 $(document).ready(function() {
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": {
-          "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-          "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-          "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-        },
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": {
-          "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-          "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-          "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-        },
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    },
-    {
-      "user": {
-        "name": "Johann von Goethe",
-        "avatars": {
-          "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-          "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-          "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-        },
-        "handle": "@johann49"
-      },
-      "content": {
-        "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
-      },
-      "created_at": 1461113796368
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+    const form = this;
+    if (($(form).serialize().length - 5) < 1) {
+      function emptyAlert() {
+        const el = document.createElement("div");
+        el.setAttribute("style","font-size:1.1em;position:fixed;top:35%;left:25%;right:25%;text-align:center;background-color:#FFDA6E;padding:25px;font-weight:bold");
+        el.innerHTML = "Your message is empty. You need to write a Tweet before you can submit it.";
+        setTimeout(function(){
+          el.parentNode.removeChild(el);
+          },1500);
+        document.body.appendChild(el);
+      };
+      emptyAlert();
     }
-  ];
+    else if (($(form).serialize().length - 5) > 140) {
+      function longAlert() {
+        const el = document.createElement("div");
+        el.setAttribute("style","font-size:1.1em;position:fixed;top:35%;left:25%;right:25%;text-align:center;background-color:#FFDA6E;padding:25px;font-weight:bold");
+        el.innerHTML = "Your Tweet is too long. You can only use a maximum of 140 characters.";
+        setTimeout(function(){
+          el.parentNode.removeChild(el);
+          },1500);
+        document.body.appendChild(el);
+      };
+      longAlert();
+    }
+    else {
+      $.ajax({
+        url: '/tweets/',
+        method: 'POST',
+        data: $(form).serialize(),
+        success: function(tweet) {
+          form.reset();
+          loadTweets();
+        }
+      });
+    }
+  });
 
   function createTweetElement(tweet) {
     const dateVal = new Date(tweet.created_at);
@@ -70,10 +63,21 @@ $(document).ready(function() {
   function renderTweets(tweets) {
     tweets.forEach(function(tweet) {
       let $tweetVal = createTweetElement(tweet);
-      $('#tweet-container').append($tweetVal);
+      $('#tweet-container').prepend($tweetVal);
     });
   }
 
-  renderTweets(data);
+  function loadTweets() {
+    $.ajax({
+      url: '/tweets/',
+      method: 'GET',
+      success: function(tweet) {
+        $('#tweet-container').empty();
+        renderTweets(tweet);
+        }
+      });
+  };
+
+  loadTweets();
 
 });

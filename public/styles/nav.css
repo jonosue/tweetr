@@ -11,6 +11,33 @@
   z-index: 1;
 }
 
+#nav-bar .composer {
+  background-color: #FFB149;
+  border-radius: 5px;
+  float: right;
+  height: 40px;
+  margin: 10px auto;
+  padding-left: 10px;
+  width: 120px;
+}
+
+#nav-bar .composer:hover {
+  background-color: #2ACF20;
+  border-radius: 25px;
+}
+
+#nav-bar .compose-button {
+  width: 30px;
+}
+
+#nav-bar .compose-text {
+  float: right;
+  font-size: 1em;
+  line-height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 #nav-bar .header {
   float: left;
   font-size: 2em;

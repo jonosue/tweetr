@@ -6,6 +6,11 @@
 
 $(document).ready(function() {
 
+  $(".composer").on("click", function(event) {
+    $( ".new-tweet" ).slideToggle();
+    $( "textarea" ).focus();
+  });
+
   $("form").on("submit", function(event) {
     event.preventDefault();
     const form = this;
@@ -47,7 +52,9 @@ $(document).ready(function() {
   });
 
   function createTweetElement(tweet) {
-    const dateVal = new Date(tweet.created_at);
+    const dateCreated = new Date(tweet.created_at);
+    const dateDiff = (Date.now() - dateCreated);;
+    const daysAgo = String(Math.floor(dateDiff/1000/60/60/24)) + " days ago";
     let $tweet = $("<article>");
     $tweet.append($("<header>").append("<img class='profile-pic'>").append("<span class='author-name'>").append("<span class='author-account'>"));
     $tweet.append($("<span>").addClass("tweet-words"));
@@ -56,7 +63,7 @@ $(document).ready(function() {
     $tweet.find(".author-name").text(tweet.user.name);
     $tweet.find(".author-account").text(tweet.user.handle);
     $tweet.find(".tweet-words").text(tweet.content.text);
-    $tweet.find(".tweet-date").text(dateVal);
+    $tweet.find(".tweet-date").text(daysAgo);
     return $tweet;
   }
 

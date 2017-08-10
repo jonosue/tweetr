@@ -14,7 +14,7 @@ $(document).ready(function() {
     el.innerHTML = "Your message is empty. You need to write a Tweet before you can submit it.";
     setTimeout(function(){
       el.parentNode.removeChild(el);
-      },1500);
+      },2500);
     document.body.appendChild(el);
   };
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
     el.innerHTML = "Your Tweet is too long. You can only use a maximum of 140 characters.";
     setTimeout(function(){
       el.parentNode.removeChild(el);
-      },1500);
+      },2500);
     document.body.appendChild(el);
   };
 
@@ -87,6 +87,7 @@ $(document).ready(function() {
         data: $(form).serialize(),
         success: function(tweet) {
           form.reset();
+          $(form).find(".counter").text(140);
           loadTweets();
         }
       });

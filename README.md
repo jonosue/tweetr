@@ -12,11 +12,11 @@ Tweeter is a simple, single-page Twitter clone, created as part of the Lighthous
 
 ## Final Product
 
-!["Screenshot of Main Page, with Form Showing"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/url-list-page.png)
-!["Screenshot of Main Page, with Form Hidden"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/new-urls-page.png)
-!["Screenshot of Tweet Composer, with Character Limit Exceeded"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/register-page.png)
-!["Screenshot of Alert for Exceeding Character Limit"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/login-page.png)
-!["Screenshot of Tweet List, with New Tweet Added"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/individual-url-page.png)
+!["Screenshot of Main Page, with Form Showing"](https://raw.githubusercontent.com/jonosue/tweetr/master/docs/tweet-compose.png)
+!["Screenshot of Main Page, with Form Hidden"](https://raw.githubusercontent.com/jonosue/tweetr/master/docs/tweet-form-hidden.png)
+!["Screenshot of Tweet Composer, with Character Limit Exceeded"](https://raw.githubusercontent.com/jonosue/tweetr/master/docs/tweet-counter-red-text.png)
+!["Screenshot of Alert for Exceeding Character Limit"](https://raw.githubusercontent.com/jonosue/tweetr/master/docs/tweet-submit-over-limit.png)
+!["Screenshot of Tweet List, with New Tweet Added"](https://raw.githubusercontent.com/jonosue/tweetr/master/docs/tweet-result-list.png)
 
 
 ## Getting Started

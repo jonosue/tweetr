@@ -66,6 +66,8 @@ $(document).ready(function() {
 
 // EVENT HANDLERS (these handle events for the "Compose button" as well as the form submission process)
 
+  $("textarea").focus();
+
   $(".composer").on("click", function(event) {
     $(".new-tweet").slideToggle();
     $("textarea").focus();

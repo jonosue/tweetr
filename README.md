@@ -1,8 +1,23 @@
-# Tweeter Project
+# Jonathan Sue's "Tweeter" Project (Lighthouse Labs)
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone, created as part of the Lighthouse Labs curriculum. In this project, I did all of the CSS styling, as well as writing functions and event handlers using JavaScript, JQuery, and AJAX in order to asynchronously compose, submit, and retrieve tweets from a MongoDB collection. Finally, I also did some rudimentary image editing in order to style the icons how I wanted them to appear.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+
+## Functional Requirements
+
+- Primarily a client-side Single Page App (SPA)
+- The client-side app communicates with a server via AJAX
+- Tweets are persisted to MongoDB and survive server restart
+
+
+## Final Product
+
+!["Screenshot of Main Page, with Form Showing"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/url-list-page.png)
+!["Screenshot of Main Page, with Form Hidden"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/new-urls-page.png)
+!["Screenshot of Tweet Composer, with Character Limit Exceeded"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/register-page.png)
+!["Screenshot of Alert for Exceeding Character Limit"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/login-page.png)
+!["Screenshot of Tweet List, with New Tweet Added"](https://raw.githubusercontent.com/jonosue/tinyapp-project/master/docs/individual-url-page.png)
+
 
 ## Getting Started
 
@@ -11,7 +26,17 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+
 ## Dependencies
 
+- body-parser
+- chance
 - Express
+- md5
+- MongoDB
 - Node 5.10.x or above
+
+
+## Contact
+
+Questions? Comments? Please tweet me at [@JonoSue](http://twitter.com/JonoSue).

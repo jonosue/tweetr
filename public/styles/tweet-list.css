@@ -5,46 +5,6 @@ article {
   margin: 60px 2em 60px 2em;
 }
 
-article .tweet-words {
-  display: block;
-  padding: 20px 10px 20px 10px;
-  word-break: break-word;
-}
-
-article header {
-  background: #eee;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  height: 50px;
-  line-height: 30px;
-  opacity: 0.7;
-  padding: 5px;
-}
-
-article:hover header {
-  opacity: 1.0;
-}
-
-article header img {
-  border-radius: 5px;
-  float: left;
-  height: 40px;
-}
-
-article header .author-account {
-  color: #949494;
-  float: right;
-  font-size: 0.9em;
-}
-
-article header .author-name {
-  color: #8787B0;
-  float: left;
-  font-weight: bold;
-  font-size: 1.3em;
-  padding-left: 10px;
-}
-
 article footer {
   border-top: solid 1px;
   border-color: #eee;
@@ -66,4 +26,44 @@ article:hover footer img {
 
 article footer .tweet-date {
   float: left;
+}
+
+article header {
+  background: #eee;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 50px;
+  line-height: 30px;
+  opacity: 0.7;
+  padding: 5px;
+}
+
+article:hover header {
+  opacity: 1.0;
+}
+
+article header .author-account {
+  color: #949494;
+  float: right;
+  font-size: 0.9em;
+}
+
+article header .author-name {
+  color: #8787B0;
+  float: left;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+article header img {
+  border-radius: 5px;
+  float: left;
+  height: 40px;
+}
+
+article .tweet-words {
+  display: block;
+  padding: 20px 10px 20px 10px;
+  word-break: break-word;
 }

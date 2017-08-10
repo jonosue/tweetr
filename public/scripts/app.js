@@ -6,50 +6,27 @@
 
 $(document).ready(function() {
 
-  $(".composer").on("click", function(event) {
-    $( ".new-tweet" ).slideToggle();
-    $( "textarea" ).focus();
-  });
+// FUNCTIONS
 
-  $("form").on("submit", function(event) {
-    event.preventDefault();
-    const form = this;
-    if (($(form).serialize().length - 5) < 1) {
-      function emptyAlert() {
-        const el = document.createElement("div");
-        el.setAttribute("style","font-size:1.1em;position:fixed;top:35%;left:25%;right:25%;text-align:center;background-color:#FFDA6E;padding:25px;font-weight:bold");
-        el.innerHTML = "Your message is empty. You need to write a Tweet before you can submit it.";
-        setTimeout(function(){
-          el.parentNode.removeChild(el);
-          },1500);
-        document.body.appendChild(el);
-      };
-      emptyAlert();
-    }
-    else if (($(form).serialize().length - 5) > 140) {
-      function longAlert() {
-        const el = document.createElement("div");
-        el.setAttribute("style","font-size:1.1em;position:fixed;top:35%;left:25%;right:25%;text-align:center;background-color:#FFDA6E;padding:25px;font-weight:bold");
-        el.innerHTML = "Your Tweet is too long. You can only use a maximum of 140 characters.";
-        setTimeout(function(){
-          el.parentNode.removeChild(el);
-          },1500);
-        document.body.appendChild(el);
-      };
-      longAlert();
-    }
-    else {
-      $.ajax({
-        url: '/tweets/',
-        method: 'POST',
-        data: $(form).serialize(),
-        success: function(tweet) {
-          form.reset();
-          loadTweets();
-        }
-      });
-    }
-  });
+  function emptyAlert() {
+    const el = document.createElement("div");
+    el.setAttribute("style","font-size:1.1em;position:fixed;top:35%;left:25%;right:25%;text-align:center;background-color:#FFDA6E;padding:25px;font-weight:bold");
+    el.innerHTML = "Your message is empty. You need to write a Tweet before you can submit it.";
+    setTimeout(function(){
+      el.parentNode.removeChild(el);
+      },1500);
+    document.body.appendChild(el);
+  };
+
+  function longAlert() {
+    const el = document.createElement("div");
+    el.setAttribute("style","font-size:1.1em;position:fixed;top:35%;left:25%;right:25%;text-align:center;background-color:#FFDA6E;padding:25px;font-weight:bold");
+    el.innerHTML = "Your Tweet is too long. You can only use a maximum of 140 characters.";
+    setTimeout(function(){
+      el.parentNode.removeChild(el);
+      },1500);
+    document.body.appendChild(el);
+  };
 
   function createTweetElement(tweet) {
     const dateCreated = new Date(tweet.created_at);
@@ -81,10 +58,39 @@ $(document).ready(function() {
       success: function(tweet) {
         $('#tweet-container').empty();
         renderTweets(tweet);
-        }
-      });
+      }
+    });
   };
 
   loadTweets();
+
+// EVENT HANDLERS
+
+  $(".composer").on("click", function(event) {
+    $(".new-tweet").slideToggle();
+    $("textarea").focus();
+  });
+
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+    const form = this;
+    if (($(form).serialize().length - 5) < 1) {
+      emptyAlert();
+    }
+    else if (($(form).serialize().length - 5) > 140) {
+      longAlert();
+    }
+    else {
+      $.ajax({
+        url: '/tweets/',
+        method: 'POST',
+        data: $(form).serialize(),
+        success: function(tweet) {
+          form.reset();
+          loadTweets();
+        }
+      });
+    }
+  });
 
 });

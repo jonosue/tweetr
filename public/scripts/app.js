@@ -35,7 +35,7 @@ $(document).ready(function() {
     let $tweet = $("<article>");
     $tweet.append($("<header>").append("<img class='profile-pic'>").append("<span class='author-name'>").append("<span class='author-account'>"));
     $tweet.append($("<span>").addClass("tweet-words"));
-    $tweet.append($("<footer>").append("<span class='tweet-date'>").append("<img src='/images/report-img.png'>").append("<img src='/images/retweet-img.png'>").append("<img src='/images/like-img.png'>"));
+    $tweet.append($("<footer>").append("<span class='tweet-date'>").append("<img src='/images/like-img.png'>").append("<img src='/images/retweet-img.png'>").append("<img src='/images/report-img.png'>"));
     $tweet.find(".profile-pic").attr("src", tweet.user.avatars.regular);
     $tweet.find(".author-name").text(tweet.user.name);
     $tweet.find(".author-account").text(tweet.user.handle);

@@ -1,3 +1,5 @@
+// This function is used to count the characters remaining as the user provides text input via typing.
+
 $(document).ready(function() {
   $(".new-tweet").on("keyup", "textarea", function() {
     const charsLeft = (140 - ($(this).val().length));

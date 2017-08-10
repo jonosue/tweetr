@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
 
-// FUNCTIONS
+// FUNCTIONS (the first two work with creating "alert-type" pop-ups and the last three are for creating, rendering, and loading tweets)
 
   function emptyAlert() {
     const el = document.createElement("div");
@@ -64,7 +64,7 @@ $(document).ready(function() {
 
   loadTweets();
 
-// EVENT HANDLERS
+// EVENT HANDLERS (these handle events for the "Compose button" as well as the form submission process)
 
   $(".composer").on("click", function(event) {
     $(".new-tweet").slideToggle();
@@ -76,9 +76,11 @@ $(document).ready(function() {
     const form = this;
     if (($(form).serialize().length - 5) < 1) {
       emptyAlert();
+      $("textarea").focus();
     }
     else if (($(form).serialize().length - 5) > 140) {
       longAlert();
+      $("textarea").focus();
     }
     else {
       $.ajax({
@@ -89,6 +91,7 @@ $(document).ready(function() {
           form.reset();
           $(form).find(".counter").text(140);
           loadTweets();
+          $("textarea").focus();
         }
       });
     }

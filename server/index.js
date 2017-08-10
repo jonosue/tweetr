@@ -1,6 +1,6 @@
 "use strict";
 
-// Basic express setup:
+// Basic express and MongoDB setup:
 
 const PORT          = 8080;
 const express       = require("express");
@@ -11,6 +11,8 @@ const MONGODB_URI   = "mongodb://localhost:27017/tweeter";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
+// I have wrapped all the various "requires" and express() methods inside the MongoClient function:
 
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {

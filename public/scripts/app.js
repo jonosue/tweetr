@@ -6,27 +6,7 @@
 
 $(document).ready(function() {
 
-// FUNCTIONS (the first two work with creating "alert-type" pop-ups and the last three are for creating, rendering, and loading tweets)
-
-  function emptyAlert() {
-    const el = document.createElement("div");
-    el.setAttribute("style","font-size:1.1em;position:fixed;top:35%;left:25%;right:25%;text-align:center;background-color:#FFDA6E;padding:25px;font-weight:bold");
-    el.innerHTML = "Your message is empty. You need to write a Tweet before you can submit it.";
-    setTimeout(function(){
-      el.parentNode.removeChild(el);
-      },2500);
-    document.body.appendChild(el);
-  };
-
-  function longAlert() {
-    const el = document.createElement("div");
-    el.setAttribute("style","font-size:1.1em;position:fixed;top:35%;left:25%;right:25%;text-align:center;background-color:#FFDA6E;padding:25px;font-weight:bold");
-    el.innerHTML = "Your Tweet is too long. You can only use a maximum of 140 characters.";
-    setTimeout(function(){
-      el.parentNode.removeChild(el);
-      },2500);
-    document.body.appendChild(el);
-  };
+// FUNCTIONS (these are used for creating, rendering, and loading tweets)
 
   function createTweetElement(tweet) {
     const dateCreated = new Date(tweet.created_at);
@@ -64,7 +44,7 @@ $(document).ready(function() {
 
   loadTweets();
 
-// EVENT HANDLERS (these handle events for the "Compose button" as well as the form submission process)
+// EVENT HANDLERS (these handle events for page load, the "Compose button", and the form submission process)
 
   $("textarea").focus();
 
@@ -77,11 +57,11 @@ $(document).ready(function() {
     event.preventDefault();
     const form = this;
     if (($(form).serialize().length - 5) < 1) {
-      emptyAlert();
+      $("input").notify('Your message is empty. You need to write a Tweet before you can submit it.', { clickToHide: true, autoHide: true,  autoHideDelay: 3000 });
       $("textarea").focus();
     }
     else if (($(form).serialize().length - 5) > 140) {
-      longAlert();
+      $("input").notify('Your Tweet is too long. You can only use a maximum of 140 characters.', { clickToHide: true, autoHide: true,  autoHideDelay: 3000 });
       $("textarea").focus();
     }
     else {

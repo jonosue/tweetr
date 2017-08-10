@@ -27,16 +27,23 @@ Tweeter is a simple, single-page Twitter clone, created as part of the Lighthous
 4. Go to <http://localhost:8080/> in your browser.
 
 
-## Dependencies
+## Dependencies, Scripts, and External Requirements
 
 - body-parser
 - chance
 - Express
+- JQuery (2.2.3)
 - md5
 - MongoDB
 - Node 5.10.x or above
+- Normalize.css (4.1.1)
+- Notify.js
+- Roboto Condensed (external font)
 
 
 ## Contact
 
 Questions? Comments? Please tweet me at [@JonoSue](http://twitter.com/JonoSue).
+
+
+*Last updated August 10, 2017*

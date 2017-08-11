@@ -1,4 +1,4 @@
-/* CSS stylesheets are ordered alphabetically, with hover states grouped near the original declarations in order to make it easier to see changes. */
+/* CSS stylesheets are ordered alphabetically (with media queries at the bottom), with hover states grouped near the original declarations in order to make it easier to see changes. */
 
 article {
   border: solid 1.2px;
@@ -68,4 +68,13 @@ article .tweet-words {
   display: block;
   padding: 20px 10px 20px 10px;
   word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  article header .author-account {
+    font-size: 0.75em;
+  }
+  article header .author-name {
+    font-size: 1em;
+  }
 }

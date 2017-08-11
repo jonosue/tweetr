@@ -32,3 +32,15 @@ main {
   padding-top: 140px;
   width: 450px;
  }
+
+@media only handheld {
+  main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    width: 100%;
+  }
+}

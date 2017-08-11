@@ -1,4 +1,8 @@
-## NOTES  - Submission 03 <-- CURRENT
+## NOTES  - Submission 04 <-- CURRENT
+
+- I added some media queries in order to make the site more responsive than it was with the original instructions we were given when creating it. It is by no means perfect, but it's definitely more responsive than it was previously.
+
+## NOTES  - Submission 03
 
 - I successfully deployed my app to Heroku in this iteration of my submission.
 

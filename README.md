@@ -8,6 +8,7 @@ Tweeter is a simple, single-page Twitter clone, created as part of the Lighthous
 - Primarily a client-side Single Page App (SPA)
 - The client-side app communicates with a server via AJAX
 - Tweets are persisted to MongoDB and survive server restart
+- Application can be viewed via Heroku or localhost
 
 
 ## Final Product
@@ -27,16 +28,18 @@ Tweeter is a simple, single-page Twitter clone, created as part of the Lighthous
 4. Go to <http://localhost:8080/> in your browser.
 
 
-## Dependencies, Scripts, and External Requirements
+## Dependencies, Scripts, and External Requirements/Resources
 
 - body-parser
 - chance
+- Dotenv
 - Express
-- JQuery (2.2.3)
+- Heroku
+- JQuery
 - md5
 - MongoDB
 - Node 5.10.x or above
-- Normalize.css (4.1.1)
+- Normalize.css
 - Notify.js
 - Roboto Condensed (external font)
 

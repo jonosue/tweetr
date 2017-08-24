@@ -1,6 +1,8 @@
 # Jonathan Sue's "Tweeter" Project (Lighthouse Labs)
 
-Tweeter is a simple, single-page Twitter clone, created as part of the Lighthouse Labs curriculum. In this project, I did all of the CSS styling, as well as writing functions and event handlers using JavaScript, JQuery, and AJAX in order to asynchronously compose, submit, and retrieve tweets from a MongoDB database collection. Finally, I also did some rudimentary image editing in order to style the icons how I wanted them to appear.
+
+## Background
+This project was completed as part of the Week 3 requirements while I was a student in the Web Development bootcamp at Lighthouse Labs. Tweeter is a simple, single-page Twitter clone, created as part of the Lighthouse Labs curriculum. In this project, I did all of the CSS styling, as well as writing functions and event handlers using JavaScript, JQuery, and AJAX in order to asynchronously compose, submit, and retrieve tweets from a MongoDB database collection. Finally, I also did some rudimentary image editing in order to style the icons how I wanted them to appear.
 
 
 ## Functional Requirements
@@ -49,4 +51,4 @@ Tweeter is a simple, single-page Twitter clone, created as part of the Lighthous
 Questions? Comments? Please tweet me at [@JonoSue](http://twitter.com/JonoSue).
 
 
-*Last updated August 10, 2017*
+*README: Last updated August 24, 2017*

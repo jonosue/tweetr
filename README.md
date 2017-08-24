@@ -2,7 +2,7 @@
 
 
 ## Background
-This project was completed as part of the Week 3 requirements while I was a student in the Web Development bootcamp at Lighthouse Labs. Tweeter is a simple, single-page Twitter clone, created as part of the Lighthouse Labs curriculum. In this project, I did all of the CSS styling, as well as writing functions and event handlers using JavaScript, JQuery, and AJAX in order to asynchronously compose, submit, and retrieve tweets from a MongoDB database collection. Finally, I also did some rudimentary image editing in order to style the icons how I wanted them to appear.
+This project was completed as part of the Week 3 requirements while I was a student in the Web Development bootcamp at Lighthouse Labs. Tweeter is a simple, single-page Twitter clone. In this project, I did all of the CSS styling, as well as writing functions and event handlers using JavaScript, JQuery, and AJAX in order to asynchronously compose, submit, and retrieve tweets from a MongoDB database collection. Finally, I also did some rudimentary image editing in order to style the icons how I wanted them to appear.
 
 
 ## Functional Requirements
